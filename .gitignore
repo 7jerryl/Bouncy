@@ -44,3 +44,4 @@ local/
 # IDE files
 .idea/
 .vscode/launch.json
+*.code-workspace

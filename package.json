@@ -1,0 +1,26 @@
+{
+  "__comment0": "start-dev runs the jsx compiler, which watches for changes in the jsx folder and then",
+  "__comment1": "compiles watched jsx files into the js folder. the piped nodemon command then restarts",
+  "__comment2": "the server when there are changes in the js folder, which is after each jsx file is compiled.",
+  "name": "bouncy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "watch-and-compile-jsx": "npx babel --watch jsx --out-dir js --presets @babel/preset-react",
+    "start-dev": "npm run watch-and-compile-jsx | nodemon --watch js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-react": "^7.0.0"
+  }
+}
